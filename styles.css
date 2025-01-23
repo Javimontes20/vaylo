@@ -637,3 +637,32 @@ footer {
     transform: translateY(-70px);
   }
   
+
+  @media (max-width: 768px) {
+    .contenidoHeader {
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+
+    }
+    .encabezado h1 {
+        font-size: 60px;
+    }
+    .boton {
+        width: 150px;
+        height: 70px;
+    }
+    .logo {
+      display: none;
+    }
+    .logo h1 {
+        font-size: 40px;
+    }
+   
+}

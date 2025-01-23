@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  main{
+    background-color: #212121;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+
+  }
+  
+  
+  .videoHeader {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .videoHeader video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  .contenidoHeader {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto 1fr; /* Dos filas: una para el logo y otra para el contenido */
+    align-items: center;
+    justify-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 20px;
+    padding: 20px;
+    
+  }
+  
+  header {
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    width: 100%;
+  }
+  
+  .logo {
+    grid-column: 1;
+    grid-row: 1; /* El logo va en la primera fila */
+    align-self: start; /* Alinea el logo al principio de la fila */
+    justify-self: start; /* Alinea el logo al principio de la columna */
+    margin-top: 120px;
+    margin-left:120px; /* Ajusta el margen */
+    color: white;
+    z-index: 2;
+  }
+  
+  .encabezado h1 {
+    font-size: 120px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: transparent;
+}
+
+    .encabezado p {
+        font-size: 20px;
+    }
+  .botones {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+  }
+   .boton {
+    width: 170px;
+    height: 80px;
+    border: 3px solid transparent;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1.2em;
+    font-weight: 550;
+    margin-top: 40px;
+  }
+  
+  .boton a {
+    text-decoration: none;
+  }
+  
+  .boton:hover {
+    background: white;
+    opacity: 0.7;
+    color: white;
+    font-size: 1.5em;
+  }
+  .articulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+    font-family: "Poppins", sans-serif;
+    padding: 50px 50px;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    color: white;
+}
+
+.articulos article {
+    text-align: center;
+    width: 100%;
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease; /* Añadido opacity en la transición */
+    cursor: pointer;
+}
+
+.articulos article h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.articulos article p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.articulos article i {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.articulos article button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Inicialmente, todos los artículos se verán nítidos */
+.articulos article {
+    filter: none; /* No hay difuminado por defecto */
+    opacity: 1; /* Totalmente visibles */
+}
+
+/* Cuando se pasa el ratón por un artículo */
+.articulos article:hover {
+    transform: scale(1.1); /* Hacer zoom en el artículo */
+}
+
+/* Difuminar los artículos que no están en hover */
+.articulos article:not(:hover) {
+    filter: blur(2px); /* Difuminar los artículos no seleccionados */
+    opacity: 0.7; /* Hacer que los artículos no seleccionados sean menos opacos */
+}
+
+/* Si deseas que el texto y los iconos de los artículos también tengan una animación al hacer hover */
+.articulos article:hover h3,
+.articulos article:hover p {
+    color: #00CCCB; /* Cambiar color al hacer hover */
+}
+
+.articulos article button:hover {
+    background-color: #00CCCB; /* Cambiar el color del botón cuando pasa el ratón sobre el artículo */
+}
+.articulos i{
+    color: #00CCCB;
+}
+
+.sloganContenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 30px;
+    background-color:#212121 ;
+    overflow: hidden;
+}
+
+.Slogan {
+    max-width: 50%;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.Slogan h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+}
+
+.Slogan p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.videoSlogan {
+    width: 48%;
+    position: relative;
+    border: 2px solid #00b8b8; /* Un borde más suave y moderno, en línea con la estética de Vaylo */
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 4px;
+    background: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.videoSlogan video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.videoSlogan:hover {
+    transform: scale(1.05); /* Efecto sutil de zoom */
+    box-shadow: 0 0 20px rgba(0, 184, 184, 0.8); /* Resalta el video al hacer hover, evocando la idea de exploración */
+    border: 2px solid #00d4d4;
+}
+
+
+/* Estilos para la sección "Nuestra Visión" */
+.Vision {
+    background-color: #212121; /* Fondo oscuro como la web */
+    
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6); /* Sombra sutil para darle profundidad */
+    margin: 50px auto;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título de la sección "Nuestra Visión" */
+.Vision h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #00b8b8;  /* Color distintivo para resaltar */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.Vision h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60%;
+    height: 3px;
+    background-color: #00b8b8;
+    transform: translateX(-50%); /* Centrar la línea */
+}
+
+/* Estilo para los párrafos */
+.Vision p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #b0b0b0;  /* Gris suave para el texto */
+    margin-bottom: 20px;
+    padding: 0 30px;
+    text-align: justify;
+    font-weight: 300;
+}
+
+/* Estilo para el hover de la sección */
+.Vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+/* Estilo para la primera letra de los párrafos */
+.Vision p:first-letter {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00b8b8;
+}
+
+/* Estilo para el fondo con overlay oscuro */
+.Vision::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Filtro oscuro para mejorar la legibilidad */
+    z-index: -1;
+}
+
+/* Estilos para la sección "¿Por qué Vaylo?" */
+.Vaylo {
+    background-color: #212121; /* Fondo oscuro como el anterior */
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+    margin: 50px auto;
+    max-width: 900px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Título de la sección "¿Por qué Vaylo?" */
+.Vaylo h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00b8b8;  /* Color distintivo de la marca */
+    position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.Vaylo h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60%;
+    height: 3px;
+    background-color: #00b8b8;
+    transform: translateX(-50%);
+}
+
+/* Estilo para los párrafos */
+.Vaylo p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    padding: 0 30px;
+    text-align: justify;
+    font-weight: 300;
+}
+
+/* Estilo para el hover de la sección */
+.Vaylo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+}
+
+/* Estilo para la primera letra de los párrafos */
+.Vaylo p:first-letter {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #00b8b8;
+}
+
+/* Estilo para el fondo con overlay oscuro */
+.Vaylo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Filtro oscuro para contraste */
+    z-index: -1;
+}
+/* Contenedor de la sección */
+.unete-viaje {
+    background-color: #212121;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    margin: 50px auto;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 0px;
+}
+
+.unete-viaje h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #00b8b8;  /* Color distintivo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Línea decorativa debajo del título */
+.unete-viaje h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60%;
+    height: 3px;
+    background-color: #00b8b8;
+    transform: translateX(-50%);
+}
+
+/* Estilo del párrafo */
+.unete-viaje p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+/* Estilos del formulario */
+.unete-viaje form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.unete-viaje input {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #333;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.unete-viaje input:focus {
+    background-color: #00b8b8;
+    outline: none;
+}
+
+.unete-viaje button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #00b8b8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.unete-viaje button:hover {
+    background-color: #007b7b;
+    transform: translateY(-3px);
+}
+
+.unete-viaje button:active {
+    transform: translateY(1px);
+}
+
+/* Efecto de aparición */
+.unete-viaje p:nth-child(5) {
+    animation: fadeInUp 1s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+}
+
+/* Animación para el texto */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Fondo con overlay */
+
+.unete-viaje::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);  /* Filtro oscuro para mejor contraste */
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* Efecto de hover para el contenedor */
+.unete-viaje:hover::before {
+    background: rgba(0, 0, 0, 0.6);  /* Fondo más oscuro al hacer hover */
+    transform: scale(1.05);  /* Ligeramente más grande para efecto */
+}
+
+/* From Uiverse.io by javierBarroso */ 
+footer {
+    background-color: #212121;
+    color: white;
+    text-align: center;
+    padding: 40px 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    border-top: 1px solid #333;
+    width: 100%;
+    position: relative;
+    
+}
+.social-login-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #00000055);
+    background-color: #212121;
+  }
+  .social-login-icons svg {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+  }
+  
+  .social-icon-1,
+  .social-icon-1-1,
+  .social-icon-2,
+  .social-icon-2-2,
+  .social-icon-3,
+  .social-icon-3-3,
+  .social-icon-4,
+  .social-icon-4-4 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 20px 0 0px 0;
+    color: white;
+  }
+  
+  .icon svg {
+    fill: #111;
+  }
+  
+  .socialcontainer {
+    height: 80px;
+    overflow: hidden;
+  }
+  .social-icon-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  }
+  .social-icon-1 svg,
+  .social-icon-2 svg,
+  .social-icon-3 svg,
+  .social-icon-4 svg {
+    opacity: 0;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+  
+  }
+  .social-icon-1-1 {
+    transition-duration: 0.4s;
+    background-color: rgb(0, 0, 0, 0);
+  }
+  .socialcontainer:hover .social-icon-1 {
+    transform: translateY(-70px);
+  }
+  .socialcontainer:hover .social-icon-1 svg,
+  .socialcontainer:hover .social-icon-2 svg,
+  .socialcontainer:hover .social-icon-3 svg,
+  .socialcontainer:hover .social-icon-4 svg {
+    opacity: 1;
+  }
+  .social-icon-2 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: linear-gradient(
+      72.44deg,
+      #ff7a00 11.92%,
+      #ff0169 51.56%,
+      #d300c5 85.69%
+    );
+  }
+  .socialcontainer:hover .social-icon-2 {
+    transform: translateY(-70px);
+  }
+  .social-icon-3 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+    background: #316ff6;
+  }
+  
+  .socialcontainer:hover .social-icon-3 {
+    transform: translateY(-70px);
+  }
+  .social-icon-4 {
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.46, -0.78, 0.5, 1.56);
+  
+    background: linear-gradient(
+      180deg,
+      rgba(129, 34, 144, 1) 0%,
+      rgba(77, 34, 124, 1) 91%
+    );
+  }
+  
+  .socialcontainer:hover .social-icon-4 {
+    transform: translateY(-70px);
+  }
+  
